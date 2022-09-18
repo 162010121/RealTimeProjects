@@ -1,0 +1,5 @@
+package com.gotit.exception;
+
+public class CBHotelsException {
+
+}

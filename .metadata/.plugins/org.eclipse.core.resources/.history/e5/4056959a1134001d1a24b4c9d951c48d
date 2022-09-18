@@ -1,0 +1,40 @@
+package com.thoghti.controller;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.thoghti.repository.entity.OrderEntity;
+import com.thoghti.service.OrderService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+
+public class OrderControllerTest {
+	
+	@InjectMocks
+   private	OrderController controller;
+
+	@Mock
+	private OrderService service;
+	
+	@Test
+	public void testRigestor()throws Exception
+	{
+		OrderEntity entity1=new OrderEntity();
+		OrderEntity entity2=new OrderEntity();
+		//OrderEntity entity=mock(OrderEntity.class);
+		List<OrderEntity> orders=new ArrayList<>();
+		when(service.insertOrders(Mockito.any())).thenReturn(entity);
+		
+	}
+	
+}

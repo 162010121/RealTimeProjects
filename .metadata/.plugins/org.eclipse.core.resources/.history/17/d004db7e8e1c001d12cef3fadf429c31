@@ -1,0 +1,13 @@
+package com.akhm;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UserWebApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UserWebApiApplication.class, args);
+	}
+
+}

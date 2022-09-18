@@ -1,0 +1,45 @@
+package com.gotit.service.vo;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+
+import lombok.Data;
+
+
+@Data
+public class CBAdminsVO extends CabResponseVO {
+	
+	
+	
+	private Long hotel_Id;
+	
+	private String hotel_Name;
+
+	private String hotel_Ref_Id;
+
+	private String is_Subscribed;
+
+	private String tags;
+	
+	private String hotels_Address;
+
+	private String token;
+
+	private String lat;
+
+	private String ing;
+
+	private int added_By;
+
+	private int updated_By;
+
+	private String status;
+
+	private Timestamp added_On;
+
+	private Timestamp updated_On;
+	
+	
+
+}

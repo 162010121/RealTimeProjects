@@ -1,0 +1,13 @@
+package com.gotit.service.vo;
+
+import lombok.Data;
+
+@Data
+public class CanResponseVO {
+	
+	
+	private String response_Code;
+	private String response_Description;
+	private String response_Message;
+
+}

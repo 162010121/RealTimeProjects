@@ -1,0 +1,43 @@
+package com.akhm.controller;
+
+
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import com.akhm.repository.entity.PropertyEntity;
+import com.akhm.service.PropertyService;
+
+public class PropertyControllerTest {
+	
+	@InjectMocks
+	private PropertyController  propertyController;
+	@Mock
+	private PropertyService propertyService;
+	@Test
+	public void testInsert() throws Exception {
+		
+		PropertyEntity entity=mock(PropertyEntity.class);
+		when(propertyService.insertProperty(Mockito.any())).thenReturn(entity);
+		ResponseEntity<PropertyEntity> response=propertyController.insertProperty(Mockito.any());
+		assertEquals(HttpStatus.OK, response.getStatusCode());		
+	}
+	
+	public void testGetProperty()throws Exception
+	{
+		
+	}
+	
+	
+	
+
+}

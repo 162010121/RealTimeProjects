@@ -1,0 +1,5 @@
+package com.gotit.service.vo;
+
+public class CBAdminsVO extends CabResponseVO {
+
+}

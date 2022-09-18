@@ -1,0 +1,16 @@
+package com.gotit.service;
+
+import java.util.List;
+
+import com.gotit.service.vo.CBHotelsVO;
+
+public interface CBHotelsService {
+	
+	public CBHotelsVO insertCBHotelsVO(CBHotelsVO cBHotelsVO);
+	
+	public List<CBHotelsVO> getCbHotelsVO();
+	
+	
+	
+
+}

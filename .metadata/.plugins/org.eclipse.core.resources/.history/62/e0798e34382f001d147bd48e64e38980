@@ -1,0 +1,86 @@
+package com.gotit.service;
+
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gotit.repository.CBHotelEntityRepository;
+import com.gotit.repository.entity.CBHotelEntity;
+import com.gotit.service.vo.CBHotelsVO;
+
+@Service
+public class CBHotelsImpl  implements CBHotelsService{
+	
+	@Autowired
+	private CBHotelEntityRepository   repository;
+
+	@Override
+	public CBHotelsVO insertCBHotelsVO(CBHotelsVO cBHotelsVO) {
+		
+		try {
+			
+				CBHotelEntity hotelEntity=new CBHotelEntity();
+				hotelEntity.setHotel_Id(cBHotelsVO.getHotel_Id());
+				hotelEntity.setHotel_Name(cBHotelsVO.getHotel_Name());
+				hotelEntity.setHotel_Ref_Id(cBHotelsVO.getHotel_Ref_Id());
+				hotelEntity.setIs_Subscribed(cBHotelsVO.getIs_Subscribed());
+				hotelEntity.setTags(cBHotelsVO.getTags());
+				hotelEntity.setToken(cBHotelsVO.getToken());
+				hotelEntity.setHotels_Address(cBHotelsVO.getHotels_Address());
+				hotelEntity.setLat(cBHotelsVO.getLat());
+				hotelEntity.setIng(cBHotelsVO.getIng());
+				hotelEntity.setAdded_By(cBHotelsVO.getAdded_By());
+				hotelEntity.setUpdated_By(cBHotelsVO.getUpdated_By());
+				hotelEntity.setAdded_On(cBHotelsVO.getAdded_On());
+				hotelEntity.setUpdated_On(cBHotelsVO.getUpdated_On());
+				CBHotelEntity cbEntity=repository.save(hotelEntity);
+				cBHotelsVO.setHotel_Id(hotelEntity.getHotel_Id());
+				cBHotelsVO.setHotel_Name(hotelEntity.getHotel_Name());
+				cBHotelsVO.setHotel_Ref_Id(hotelEntity.getHotel_Ref_Id());
+				cBHotelsVO.setIs_Subscribed(hotelEntity.getIs_Subscribed());
+				cBHotelsVO.setTags(hotelEntity.getTags());
+				cBHotelsVO.setToken(hotelEntity.getToken());
+				cBHotelsVO.setHotels_Address(hotelEntity.getHotels_Address());
+				cBHotelsVO.setLat(hotelEntity.getLat());
+				cBHotelsVO.setIng(hotelEntity.getIng());
+				cBHotelsVO.setAdded_By(hotelEntity.getAdded_By());
+				cBHotelsVO.setUpdated_By(hotelEntity.getUpdated_By());
+				cBHotelsVO.setAdded_On(hotelEntity.getAdded_On());
+				cBHotelsVO.setUpdated_On(hotelEntity.getUpdated_On());
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+		
+		}
+		
+		
+		
+		return null;
+	}
+
+	@Override
+	public List<CBHotelsVO> getCbHotelsVO() {
+		
+		return null;
+	}
+
+	
+	
+	}
+
+

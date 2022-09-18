@@ -1,0 +1,14 @@
+package com.thoghti.serviceimpl;
+
+import org.mockito.InjectMocks;
+
+import com.thoghti.repository.OrderEntityRepository;
+import com.thoghti.service.impl.OrderServiceImpl;
+
+public class OrderServiceImplTest {
+	
+	@InjectMocks
+	private OrderServiceImpl service;
+	private OrderEntityRepository repository;
+
+}

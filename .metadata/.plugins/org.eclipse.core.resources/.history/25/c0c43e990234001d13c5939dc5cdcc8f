@@ -1,0 +1,9 @@
+package com.thoghti.serviceimpl;
+
+import com.thoghti.repository.OrderEntityRepository;
+
+public class OrderServiceImplTest {
+	
+	private OrderEntityRepository repository;
+
+}

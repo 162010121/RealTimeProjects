@@ -1,0 +1,8 @@
+package com.gotit.service;
+
+public interface CBAdminsService {
+	
+	
+	
+
+}

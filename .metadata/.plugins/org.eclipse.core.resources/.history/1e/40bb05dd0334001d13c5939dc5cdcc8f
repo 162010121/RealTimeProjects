@@ -1,0 +1,43 @@
+package com.thoghti.serviceimpl;
+
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.thoghti.repository.OrderEntityRepository;
+import com.thoghti.repository.entity.OrderEntity;
+import com.thoghti.service.impl.OrderServiceImpl;
+
+
+public class OrderServiceImplTest {
+	
+	@InjectMocks
+	private OrderServiceImpl service;
+	@Autowired
+	private OrderEntityRepository repository;
+	
+	@Test
+	 public List<OrderEntity> testIinsertOrder()throws Exception
+	{
+		OrderEntity entity1=new OrderEntity();
+		OrderEntity entity2=new OrderEntity();
+		List<OrderEntity> orders=new ArrayList<>();
+		orders.add(entity1);
+		orders.add(entity2);
+		when(repository.save(Mockito.any())).thenReturn(orders);
+		entity =service.insertOrders(null)
+		
+	
+		
+		
+		return null;
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.gotit.service;
+
+import com.gotit.service.vo.CBAdminsVO;
+
+public interface CBAdminsService {
+	
+	public CBAdminsVO getAdmin(String emailId,String password);
+	
+	
+	
+
+}

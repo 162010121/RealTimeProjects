@@ -1,0 +1,9 @@
+package com.thoghti.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.thoghti.repository.entity.ItemEntity;
+
+public interface ItemEntityRepository extends JpaRepository<ItemEntity, Integer>{
+
+}

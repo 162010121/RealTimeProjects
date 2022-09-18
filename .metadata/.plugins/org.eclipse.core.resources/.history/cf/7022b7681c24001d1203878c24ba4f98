@@ -1,0 +1,5 @@
+package com.akhm.service.impl;
+
+public class JwtUserDetailsServiceImpl {
+
+}

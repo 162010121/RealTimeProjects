@@ -1,0 +1,9 @@
+package com.gotit.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.gotit.repository.entity.CBAdminsEntity;
+
+public interface CbAdminsEntityRepository extends JpaRepository<CBAdminsEntity, Integer> {
+
+}

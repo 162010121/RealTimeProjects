@@ -1,0 +1,26 @@
+package com.thoghti.serviceimpl;
+
+import java.util.List;
+
+import org.mockito.InjectMocks;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.thoghti.repository.OrderEntityRepository;
+import com.thoghti.repository.entity.OrderEntity;
+import com.thoghti.service.impl.OrderServiceImpl;
+
+
+public class OrderServiceImplTest {
+	
+	@InjectMocks
+	private OrderServiceImpl service;
+	@Autowired
+	private OrderEntityRepository repository;
+	
+	 public List<OrderEntity> insertOrder()
+	{
+		return null;
+		
+	}
+
+}

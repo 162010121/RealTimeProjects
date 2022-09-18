@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="order-data-api" project="order-data-api" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.thoghti.controller.OrderControllerTest" time="0.519">
+    <testcase name="testGetOrder" classname="com.thoghti.controller.OrderControllerTest" time="0.193"/>
+    <testcase name="testRigestor" classname="com.thoghti.controller.OrderControllerTest" time="0.033"/>
+    <testcase name="testGetOrders" classname="com.thoghti.controller.OrderControllerTest" time="0.245"/>
+  </testsuite>
+  <testsuite name="com.thoghti.serviceimpl.OrderServiceImplTest" time="0.098">
+    <testcase name="testGetOrder" classname="com.thoghti.serviceimpl.OrderServiceImplTest" time="0.024"/>
+    <testcase name="testInsertOrder" classname="com.thoghti.serviceimpl.OrderServiceImplTest" time="0.022"/>
+    <testcase name="testGetOrders" classname="com.thoghti.serviceimpl.OrderServiceImplTest" time="0.038"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+package com.thoghti.repository;
+
+public interface ItemEntityRepository {
+
+}

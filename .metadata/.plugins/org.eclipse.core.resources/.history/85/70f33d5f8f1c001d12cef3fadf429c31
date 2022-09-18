@@ -1,0 +1,39 @@
+package com.akhm.serviceimpl;
+
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.akhm.repository.PropertyRepository;
+import com.akhm.repository.entity.PropertyEntity;
+import com.akhm.service.impl.PropertyServiceImpl;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+public class PropertyServiceImplTest {
+	
+	@InjectMocks
+	private PropertyServiceImpl service;
+	@Mock
+	private PropertyRepository repository;
+	@Test
+	public void insertProperty() throws Exception
+	{
+		PropertyEntity entity=Mockito.any(PropertyEntity.class);
+		when(repository.save(Mockito.any())).thenReturn(entity);
+		service.insertProperty(entity);
+		assertNotNull(entity);
+		
+	}
+	
+	public void testGetProperties() throws Exception
+	{
+		
+	}
+
+}

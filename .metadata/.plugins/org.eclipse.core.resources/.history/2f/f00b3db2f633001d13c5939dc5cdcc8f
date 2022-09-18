@@ -1,0 +1,5 @@
+package com.thoghti.service;
+
+public interface OrderService {
+
+}

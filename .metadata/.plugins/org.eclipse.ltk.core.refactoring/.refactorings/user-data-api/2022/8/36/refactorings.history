@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.akhm.controller.JwtAuthendicationController.java&apos; to &apos;JwtAuthenticationController.java&apos;&#x0D;&#x0A;- Original project: &apos;user-data-api&apos;&#x0D;&#x0A;- Original element: &apos;com.akhm.controller.JwtAuthendicationController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.akhm.controller.JwtAuthenticationController.java&apos;" description="Rename compilation unit &apos;JwtAuthendicationController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.akhm.controller{JwtAuthendicationController.java" name="JwtAuthenticationController.java" references="false" stamp="1661738766302" version="1.0"/>
+</session>

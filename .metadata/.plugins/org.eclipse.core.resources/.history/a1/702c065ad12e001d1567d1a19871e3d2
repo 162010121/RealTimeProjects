@@ -1,0 +1,10 @@
+package com.gotit.service.vo;
+
+public class CanResponseVO {
+	
+	
+	private String response_Code;
+	private String response_Description;
+	private String response_Message;
+
+}

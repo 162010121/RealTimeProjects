@@ -1,0 +1,5 @@
+package com.gotit.repository;
+
+public interface CbAdminsEntityRepository {
+
+}

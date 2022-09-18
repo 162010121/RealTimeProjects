@@ -1,0 +1,16 @@
+package com.thoghti.serviceimpl;
+
+import org.mockito.InjectMocks;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.thoghti.repository.OrderEntityRepository;
+import com.thoghti.service.impl.OrderServiceImpl;
+
+public class OrderServiceImplTest {
+	
+	@InjectMocks
+	private OrderServiceImpl service;
+	@Autowired
+	private OrderEntityRepository repository;
+
+}

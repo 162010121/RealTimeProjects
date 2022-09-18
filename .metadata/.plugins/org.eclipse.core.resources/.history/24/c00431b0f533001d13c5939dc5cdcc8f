@@ -1,0 +1,18 @@
+package com.thoghti.repository.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "Item")
+@Data
+public class ItemEntity {
+	private Integer itemId;
+	private Integer orderId;
+	private String itemName;
+	private double itemUnitPrice;
+	private int itemQuantity;
+
+}

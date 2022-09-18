@@ -1,0 +1,150 @@
+package com.gotit.service;
+
+
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gotit.exception.CBHotelsCustomException;
+import com.gotit.repository.CBHotelEntityRepository;
+import com.gotit.repository.entity.CBHotelEntity;
+import com.gotit.service.vo.CBHotelsVO;
+
+@Service
+public class CBHotelsServiceImpl  implements CBHotelsService{
+	
+	@Autowired
+	private CBHotelEntityRepository   repository;
+
+	@Override
+	public CBHotelsVO insertCBHotelsVO(CBHotelsVO cBHotelsVO) {
+		
+		try {
+			
+			
+			  CBHotelEntity hotelEntity=new CBHotelEntity();
+			  hotelEntity.setHotel_Id(cBHotelsVO.getHotel_Id());
+			  hotelEntity.setHotel_Name(cBHotelsVO.getHotel_Name());
+			  hotelEntity.setHotel_Ref_Id(cBHotelsVO.getHotel_Ref_Id());
+			  hotelEntity.setIs_Subscribed(cBHotelsVO.getIs_Subscribed());
+			  hotelEntity.setTags(cBHotelsVO.getTags());
+			  hotelEntity.setToken(cBHotelsVO.getToken());
+			  hotelEntity.setHotels_Address(cBHotelsVO.getHotels_Address());
+			  hotelEntity.setLat(cBHotelsVO.getLat());
+			  hotelEntity.setIng(cBHotelsVO.getIng());
+			  hotelEntity.setAdded_By(cBHotelsVO.getAdded_By());
+			  hotelEntity.setUpdated_By(cBHotelsVO.getUpdated_By());
+			  hotelEntity.setAdded_On(cBHotelsVO.getAdded_On());
+			  hotelEntity.setUpdated_On(cBHotelsVO.getUpdated_On());
+			  CBHotelsVO hotelsVO=new CBHotelsVO(); CBHotelEntity
+			  cbEntity=repository.save(hotelEntity);
+			  hotelsVO.setHotel_Id(hotelEntity.getHotel_Id());
+			 hotelsVO.setHotel_Name(hotelEntity.getHotel_Name());
+			 hotelsVO.setHotel_Ref_Id(hotelEntity.getHotel_Ref_Id());
+			  hotelsVO.setIs_Subscribed(hotelEntity.getIs_Subscribed());
+			  hotelsVO.setTags(hotelEntity.getTags());
+			  hotelsVO.setToken(hotelEntity.getToken());
+			  hotelsVO.setHotels_Address(hotelEntity.getHotels_Address());
+			  hotelsVO.setLat(hotelEntity.getLat()); hotelsVO.setIng(hotelEntity.getIng());
+			  hotelsVO.setAdded_By(hotelEntity.getAdded_By());
+			  hotelsVO.setUpdated_By(hotelEntity.getUpdated_By());
+			  hotelsVO.setAdded_On(hotelEntity.getAdded_On());
+			  hotelsVO.setUpdated_On(hotelEntity.getUpdated_On());
+			 
+			  return hotelsVO;
+			 
+			
+		} catch (Exception e) {
+
+
+			throw  new CBHotelsCustomException(e.getMessage());
+		}
+		
+		
+		
+		
+	}
+
+	@Override
+	public List<CBHotelsVO> getCbHotelsVO() {
+		
+		try {
+			
+			List<CBHotelsVO> hotels=null;
+			
+			List<CBHotelEntity> entityList=repository.findAll();
+			
+			
+			if(entityList !=null && entityList.size()>0)
+			{
+				hotels=new ArrayList<>();
+				for(CBHotelEntity cbHotelEntity:entityList)
+				{
+					CBHotelsVO cbHotelsVO=new CBHotelsVO();
+					cbHotelsVO.setHotel_Id(cbHotelEntity.getHotel_Id());
+					cbHotelsVO.setHotel_Name(cbHotelEntity.getHotel_Name());
+					cbHotelsVO.setHotel_Ref_Id(cbHotelEntity.getHotel_Ref_Id());
+					cbHotelsVO.setIs_Subscribed(cbHotelEntity.getIs_Subscribed());
+					cbHotelsVO.setTags(cbHotelEntity.getTags());
+					cbHotelsVO.setToken(cbHotelEntity.getToken());
+					cbHotelsVO.setHotels_Address(cbHotelEntity.getHotels_Address());
+					cbHotelsVO.setLat(cbHotelEntity.getLat());
+					cbHotelsVO.setIng(cbHotelEntity.getIng());
+					cbHotelsVO.setAdded_By(cbHotelEntity.getAdded_By());
+					cbHotelsVO.setUpdated_By(cbHotelEntity.getUpdated_By());
+					cbHotelsVO.setAdded_On(cbHotelEntity.getAdded_On());
+					cbHotelsVO.setUpdated_On(cbHotelEntity.getUpdated_On());
+					hotels.add(cbHotelsVO);
+					
+					
+				}
+			}
+			
+			return hotels;
+		} catch (Exception e) {
+
+				throw new CBHotelsCustomException(e.getMessage());
+		}
+		
+		
+	}
+
+	@Override
+	public CBHotelsVO updateCBHotelsVO(CBHotelsVO cbHotelsVO) {
+		
+		
+		try {
+			
+				
+			CBHotelEntity hotelEntity=repository.getById(cbHotelsVO.getHotel_Id());
+			
+			if (hotelEntity !=null) {
+				
+				hotelEntity.setHotel_Id(cbHotelsVO.getHotel_Id());
+				hotelEntity.setHotel_Name(cbHotelsVO.getHotel_Name());
+				hotelEntity.setHotel_Ref_Id(cbHotelsVO.getHotel_Ref_Id());
+				hotelEntity.setHotels_Address(cbHotelsVO.getHotels_Address());
+				hotelEntity.set
+				
+				
+				
+				
+				
+			}
+		
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+
+	
+	
+	}
+
+

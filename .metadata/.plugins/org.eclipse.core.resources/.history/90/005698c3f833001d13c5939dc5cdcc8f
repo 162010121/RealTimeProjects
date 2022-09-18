@@ -1,0 +1,24 @@
+package com.thoghti.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+
+import com.thoghti.repository.entity.OrderEntity;
+import com.thoghti.service.OrderService;
+
+@Controller
+public class OrderController {
+	
+	@Autowired
+	private OrderService orderService;
+	
+	public ResponseEntity<List<OrderEntity>> inserOrder(List<OrderEntity> orders)
+	{
+		return new ResponseEntity<List<OrderEntity>>(orderService.insertOrders(orders),HttpStatus.OK);
+	}
+
+}

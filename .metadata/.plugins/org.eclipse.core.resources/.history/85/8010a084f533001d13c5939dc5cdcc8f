@@ -1,0 +1,14 @@
+package com.thoghti.repository.entity;
+
+import java.sql.Date;
+import java.util.List;
+
+public class OrderEntity {
+	
+	private Integer orderId;
+	private Date orderDate;
+	private String orderStatus;
+	private List<ItemEntity> items;
+	
+
+}

@@ -1,0 +1,8 @@
+package com.thoghti.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class OrderController {
+
+}

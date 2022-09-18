@@ -1,0 +1,14 @@
+package com.gotit.repository.entity;
+
+public class CBAdminsEntity {
+	
+	
+	private Long hotel_id;
+	private String hotel_name;
+	private String hotel_ref_id;
+	private String is_subscribed;
+	private String tags;
+	private String hotels_address;
+	
+
+}

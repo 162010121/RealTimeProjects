@@ -1,0 +1,12 @@
+package com.gotit.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.gotit.repository.entity.CBAdminsEntity;
+
+public interface CBHotelEntityRepository extends JpaRepository<CBAdminsEntity, Integer> {
+	
+	
+	public CBdminsEntity findByAdminEmailAndPassword(String email,String password);
+
+}

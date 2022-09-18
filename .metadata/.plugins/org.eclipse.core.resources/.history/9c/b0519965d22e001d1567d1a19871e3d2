@@ -1,0 +1,48 @@
+package com.gotit.repository.entity;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="CBAdmins_Tl")
+public class CBAdminsEntity {
+	
+	@Column(name="hotel_Id")
+	private Long hotel_Id;
+	@Column(name="hotel_Name")
+	private String hotel_Name;
+	@Column(name="hotel_Ref_Id")
+	private String hotel_Ref_Id;
+	@Column(name="is_Subscribed")
+	private String is_Subscribed;
+	@Column(name="tags")
+	private String tags;
+	@Column(name="hotels_Address")
+	private String hotels_Address;
+	@Column(name="token")
+	private String token;
+	@Column(name="lat")
+	private String lat;
+	@Column(name="ing")
+	private String ing;
+	@Column(name="added_By")
+	private int added_By;
+	@Column(name="updated_By")
+	private int updated_By;
+	@Column(name="status")
+	private String status;
+	@Column(name="added_On")
+	private Timestamp added_On;
+	@Column(name="updated_On")
+	private Timestamp updated_On;
+	
+	
+	
+
+}

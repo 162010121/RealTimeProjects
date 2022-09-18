@@ -1,0 +1,14 @@
+package com.gotit.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.gotit.repository.entity.CBHotelEntity;
+
+
+
+public interface CBHotelEntityRepository extends JpaRepository<CBHotelEntity, Integer> {
+	
+	
+	
+
+}

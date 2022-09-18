@@ -1,0 +1,68 @@
+package com.thoghti.controller;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.akhm.service.vo.UserVO;
+import com.thoghti.repository.entity.OrderEntity;
+import com.thoghti.service.OrderService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+
+public class OrderControllerTest {
+	
+	@InjectMocks
+   private	OrderController controller;
+
+	@Mock
+	private OrderService service;
+	
+	@Test
+	public void testRigestor()throws Exception
+	{
+		
+		 /* OrderEntity entity1=new OrderEntity(); OrderEntity entity2=new OrderEntity();
+		  List<OrderEntity> orders=new ArrayList<>(); orders.add(entity1);
+		  orders.add(entity2);
+		 
+		  when(service.insertOrders(Mockito.any())).thenReturn(orders);
+		  ResponseEntity<List<OrderEntity>>
+		  response=controller.inserOrder(Mockito.any()); assertEquals(HttpStatus.OK,
+		  response.getStatusCode());
+		 
+		 */
+		
+		
+		OrderEntity order=mock(OrderEntity.class);
+		when(service.insertOrders(Mockito.any())).thenReturn((List<OrderEntity>) order);
+		ResponseEntity<OrderEntity> response=controller.getOrder(Mockito.any());
+		assertEquals(HttpStatus.OK, response.getStatusCode());
+		
+		
+		
+	}
+	
+	public void testGetOrder()
+	{
+		
+	}
+	
+	
+		
+		
+	}
+	
+

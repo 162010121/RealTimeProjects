@@ -1,0 +1,11 @@
+package com.thoghti.service;
+
+import java.util.List;
+
+import com.thoghti.repository.entity.OrderEntity;
+
+public interface OrderService {
+	
+	public void insertOrders(List<OrderEntity> orders);
+
+}

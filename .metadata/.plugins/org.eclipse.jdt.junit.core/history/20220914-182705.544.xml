@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="order-data-api" project="order-data-api" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.thoghti.OrderDataApiApplicationTests" time="0.703" displayname="OrderDataApiApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.thoghti.OrderDataApiApplicationTests]">
+    <testcase name="contextLoads" classname="com.thoghti.OrderDataApiApplicationTests" time="0.703" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.thoghti.OrderDataApiApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

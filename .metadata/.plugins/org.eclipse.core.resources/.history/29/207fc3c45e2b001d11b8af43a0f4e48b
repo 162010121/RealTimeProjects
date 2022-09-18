@@ -1,0 +1,34 @@
+package com.akhm.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.akhm.service.RegistrationService;
+import com.akhm.service.vo.RegistrationVO;
+
+@RestController
+public class RegistrationController {
+	
+	@Autowired
+	private RegistrationService registrationService;
+	@GetMapping(path="/reg")
+	public ResponseEntity<RegistrationVO> rigestration( @RequestParam RegistrationVO registrationVO)
+	{
+		try {
+			
+			RegistrationVO registration=registrationService.insert(registrationVO);
+			return new ResponseEntity<>(registration,HttpStatus.OK);
+			
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		
+	}
+
+}

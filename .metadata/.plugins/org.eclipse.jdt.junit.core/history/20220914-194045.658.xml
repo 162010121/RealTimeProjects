@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrderControllerTest" project="order-data-api" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.thoghti.controller.OrderControllerTest" time="0.723">
+    <testcase name="testGetOrder" classname="com.thoghti.controller.OrderControllerTest" time="0.383"/>
+    <testcase name="testRigestor" classname="com.thoghti.controller.OrderControllerTest" time="0.034"/>
+    <testcase name="testGetOrders" classname="com.thoghti.controller.OrderControllerTest" time="0.252"/>
+  </testsuite>
+</testrun>

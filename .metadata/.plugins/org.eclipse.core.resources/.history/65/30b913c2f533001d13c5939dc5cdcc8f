@@ -1,0 +1,21 @@
+package com.thoghti.repository.entity;
+
+import java.sql.Date;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+@Entity
+@Table(name = "Order")
+@Data
+public class OrderEntity {
+	
+	private Integer orderId;
+	private Date orderDate;
+	private String orderStatus;
+	private List<ItemEntity> items;
+	
+
+}

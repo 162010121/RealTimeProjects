@@ -1,0 +1,27 @@
+package com.akhm.fiegnclient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.akhm.service.dto.UserDTO;
+
+@FeignClient(name="user-data-api",url="http://localhost:2024/")
+
+public interface UserClient {
+	
+	@PostMapping("/reg")
+	public UserDTO saveUser(UserDTO userDTO);
+	
+	
+	@PostMapping("/login")
+	public UserDTO getUser(UserDTO userDTO);
+	
+	
+	@PostMapping("/updateuser")
+	public UserDTO updateUser(UserDTO userDTO);
+	
+	@PostMapping("/getuserbyemailid")
+	public UserDTO getUser(String emailId);
+
+}
